@@ -3,7 +3,6 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-let g:ycm_server_python_interpreter = '/usr/bin/python'
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -14,8 +13,9 @@ Plugin 'dracula/vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jiangmiao/auto-pairs'
-
 Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -43,14 +43,20 @@ filetype plugin indent on    " required
 "
 
 " Config plugin 
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
 let g:airline_theme='onedark'
+let g:deoplete#enable_at_startup = 1
+let g:ycm_use_clangd = 1
+let g:ycm_confirm_extra_conf = 1
+
+
 set ruler
-set showtabline=2
+set showtabline=3
 set undolevels=1000
 set number
 set numberwidth=2
 
 syntax on
 colorscheme onedark
+
+
+
