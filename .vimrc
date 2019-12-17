@@ -1,3 +1,5 @@
+filetype plugin indent on
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
